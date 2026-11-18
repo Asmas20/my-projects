@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*CSS DISPLAY METHODS*/
+body{
+    text-align: center;
+    margin: 0.5rem auto;
+    
+}
+nav{
+    border:5px solid black ;
+    border-radius: 2rem;
+    margin: 0 auto 1rem;
+    max-width: 30%;
+    line-height: 7rem;
+    font-size: 3rem;
+    font-family: sans-serif;
+ }  
+  h1{
+    padding: 1rem;
+     border-radius: 2rem 2rem 0 0;
+    background-color: gold;
+  }
+ li a{
+    color: black;
+ }
+  ul li{
+    
+    list-style-type: none;
+  }
+ ul li{
+    border-top: 1px solid black;
+  }
+ ul li a,
+ ul li a:visited{/*:IS(header,footer){}---->here is is a pseudoclause this is another method
+  insted of mentioning every class and its inside elements we can use pseudoclause some pseudoclauses are is,where,all link etc*/
+    text-decoration: none;
+  }
+ul li a:hover,
+ ul li a:focus{
+    color: white;
+    background-color: black;
+  }
+  li a{/*while choosing options the bg color and color are applied only to the text not for the block thats y this is given*/
+    display: block;
+  }
+  li:last-child a{
+    border-radius: 0 0  2rem 2rem;
+  }

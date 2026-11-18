@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*CSS images*/
+
+body{
+  background-color: aliceblue;
+   background-image: url('CSS/images1/bubble-removebg-preview.png'),linear-gradient(to right,white,steelblue);/*the img
+   is transparent one it is displayed in webpage also a background color set from left to right which changes from 
+   steelblue to white. by default the linear gradient color is set from top to bottom.*/
+   background-repeat: repeat-y,no-repeat;/*the img is repeated in y axis and 
+   linear gradient is no repeat--->both values must be mapped*/
+   background-position:right ;
+   background-size: 4%,auto;/*bg size of img is minimized to 4% and auto for linear gradient*/
+ /*  background: repeat-y right url('CSS/images1/bubble-removebg-preview.png'),no-repeat linear-gradient(to right,white,steelblue); short form*/
+}
+
+img{
+    display: block;/*here we display img in block bcz there is a space bw img and border by default
+    so we display image by block as it eliminates the unnecessary gap*/
+}
+.imgex{
+    white-space: wrap;
+}
+.offscreen{
+    position: absolute;
+    left: -100000px;
+}
+  
+body{
+min-height: 400vh;
+}
+.hero{
+    border-bottom: 5px solid blue;
+
+    padding: 20PX;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+    background-color: bisque;
+   /* background-image: url('../learn_CSS/CSS/images1/bg.avif');*/
+    background-image: url('../CSS/images1/peacock.jpg');
+    background-repeat: repeat;/*when the image should NOT be repeated throughout the section give norepeat here
+    by default it is repeated here i have set this background repeat just for understanding purpose*/
+    background-size: cover;/*this makes the background image display full open the dev tool in inspect and see*/
+    background-position: bottom;
+
+}
+h1{
+    font-size: 400%;
+    color: aliceblue;
+    text-shadow: 2px 2px 5px blue;/*horizontal shadow , vertical shadow, blur radius ,color*/
+    background-color: hsla(0, 0%, 0%, 0.371);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.profile{
+    width: 25%;/*the profile takes 35% of its parent class i.e)hero class which is
+     basically 100% bcz it is not specified explicitly */
+  
+}
+.profile img{
+    width: 100%;/*the img takes 100% of its parent class i.e)profile class which is 25%*/
+      height: auto;
+    min-height: 100px;
+    border: 8px double green;
+    border-radius: 50%;
+    
+}
+.example{
+   
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 2px solid red;
+}
+.example img{
+    width: 50%;
+    height: auto;
+}
+

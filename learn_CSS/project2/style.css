@@ -1,0 +1,85 @@
+*{ /*universal selectors*/
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}                               
+html{
+     background-color: rgb(255, 255, 255);
+}
+header{
+    font-size: 2rem;
+    width: 100%;
+    border: 5px double brown ;
+    margin:0.5em ;
+    padding: 0.5em;
+}
+main{
+   border: 5px double brown ;
+   font-style: italic;
+   
+    margin:1.5em ;
+    padding: 2em; /*to create space in 4 sides*/
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+}
+input,button{
+    font-style: inherit;/* in main when the font style is given italic, it is applied only to the label not to the input and button so it is inherited to input and button here */
+      font-weight: 900;/*this attribute bolds the font*/
+}
+h1,h2{/*element selectors*/
+    color: brown;
+    width: 50%;
+    padding: 0.5em;
+    text-indent: 2em;/*the headings will be started after some space*/
+    text-decoration-line: underline;
+    text-decoration-color: black;
+    text-transform: capitalize;
+  
+  /* border: 5px dashed black;*/
+}
+.green{/*class selectors*/
+    color: green;
+    font-family: "Roboto", sans-serif;/*using font family from google fonts fonts.google.com*/
+    font-weight: 900;
+}
+ul li{
+    list-style-type: square;
+    text-align: center;
+    list-style-position: inside;
+  /*  list-style-image:  url(../CSS/images1/checkbox.png);*/
+}
+ul li:nth-child(2){/*giving text color to the second child of the list*/
+    color:rgb(129, 5, 246);
+}
+ul li::marker{/*pseudo element it should have double collen*/
+    color: rgb(247, 6, 195);/*changing the color of bullets only not text*/
+   /* font-size: 0.5em;
+    content: "click";         it is used to give content run this after taking it from comment lines for understanding*/
+}
+a{/*link styling-->styling the contents inside anchor tag*/
+    text-decoration-line: underline;
+    color: blue ;
+}
+a:visited{/*visisted,hover active are pseudo class the name itself describes the state of links*/
+    color: rgb(138, 43, 226);
+}
+a:hover{
+    color:rgba(138, 43, 226,0.5) ;
+}
+a:active{
+    color: red;
+}
+.circle{
+    margin: 1em auto;
+    background-color: yellow;
+    border: 5px solid blue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    outline: 0.5em dashed black;
+    outline-offset: 5px;
+}
+#second{/*id selectors*/
+    color: red;
+}

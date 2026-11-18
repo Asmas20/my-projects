@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*CSS columns*/
+.appetizer{
+    column-count: 4;
+    column-width: 250%;
+    column-rule: 2px solid blue;
+    column-gap: 3rem;
+}
+.appetizer p{
+    margin-top: 0;
+}
+.appetizer h2{
+    margin: 0 ;
+    padding: 1rem;
+    break-inside: avoid;/*should be given to avoid heading splits between columns*/
+    background-color: bisque;
+    color: black;
+    
+}
+.appetizer .quote{/*2 class name given bcz the margin top already set to 0 in .appetizer p{} here changeing margin top value does no
+    create any change by giving 1 class name(.quote) bcz the specification value is less when compared to top so the brower gives
+    less preference and so the margin doesnot make any change. by giving 2 classes(.appetizer .quote)the specification value
+    increase and so the margin top value is now set to 2rem*/
+    margin-top: 1rem;
+    color:red;
+    text-align: center;
+    font-size: 3rem;
+    column-span: all;
+    
+}
+.wrapping{
+    white-space: nowrap;/*given so that ---- and Nicholas dont separate*/
+}
+
+/*CSS POSITIONS*/
+body{
+   min-height: 400vh;
+  /* TIP---->scroll-behavior: smooth; for smooth scrolling of webpages*/
+}
+.outer-container{
+    border: 2px dashed black;
+    height: 150vh;
+    width: 75vw;
+    margin: 40px auto ;
+    padding: 1rem;
+    position: relative;/*absolute class with ref to parent class*/
+  
+}
+.inner-container{
+    border: 2px solid brown;
+    width: 30vw;
+    height: 100vh;
+    margin: 200px auto;
+    padding: 1em;
+   
+   
+}
+.box{
+  
+    color: white;
+    padding: 1rem;
+    width: 150px;
+    height: 150px;
+}
+
+.absolute{/*it is placed in the same place when the margin top set to zero it goes to top
+     and when the
+    position set to relative in its parent class
+     it is placed with reference to the class*/
+    background-color: blue;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;/*absolute is overlayed on other context thats y this is used*/
+    /*left:-10000000px; this is to display spme in code but not in output the absolute will not display in o/p*/
+}
+  
+.relative{/*it is placed relative to the current parent*/
+    background-color: red;
+    position: relative;
+    top: 50px;
+    left: 290px;
+    
+}
+.fixed{/*this is fixed even whrn the page is scrolled takes webpage as its reference*/
+    background-color: green;
+    position: fixed;
+}
+.sticky{/*this is fixed in a place when top margin becomes zero while scrolling and get scrolled up 
+    when the parent of this class get scrolled up*/
+    background-color: yellow;
+    position: sticky;
+    top: 0px;
+}
+/*CSS flexbox*/
+.abc{
+    border: 2px solid brown;
+    min-height: 500px;
+    min-width: 200px;
+    font-size: 2rem;
+    color: aliceblue;
+
+    display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     gap: 1rem;
+     flex-direction: row;
+     flex-wrap: wrap;
+    /* flex-flow: column nowrap;  flex direction and flex wrap are given in short form here*/
+    align-content: flex-end;
+   
+} 
+.abc1{
+    background-color: black;
+    height: 100px;
+    /*width: 100px;*/ 
+    padding: 1rem;
+
+     display: flex;/*below 3 lines are designing flex elements individuallly*/
+     justify-content: space-evenly;
+     align-items: center;
+    flex-basis: 200px;/*insted of mentioning width we can mention this this is also width*/
+    flex-shrink: 1; 
+    
+        /*  flex: 1 1 200px;flex short form flex grow,flex shrink,flex basis value*/
+}
+.abc1:nth-child(2){
+    background-color: blueviolet;
+  flex-shrink: 2;
+   /* flex: 2 2 200px;*/
+   order: 1;/* to bring the specfic nth element at the end. if to bring in front then give -1*/
+   
+}
+/*CSS GRID*/
+
+body{
+   min-height: 400vh;   
+   display: grid;
+    grid-template-columns: repeat(9,1fr);
+  grid-auto-rows: 50px auto 50px;/*defines the size of each row here 3 rows created*/
+  grid-template-areas: "hd hd hd hd hd hd hd hd hd" 
+  "mn mn mn mn mn mn mn sd sd"
+   "ft ft ft ft ft ft ft ft ft" ;/*giving name to each shell in grid area i.e) 9 columns so 9 times 
+  name given as we created 9 columns above. and 3 rows we created*/
+}
+.el{
+    display: grid;
+    background-color: brown;
+    color: aliceblue;
+    place-content: center;
+}
+.header{
+  
+    grid-area: hd;/*describes that hd given in grid template areas (above)is header */
+}
+.sidebar{
+    grid-area: sd;/*describes that sd given in grid template areas (above)is sidebar 
+    that too sd will be displayed in last 2 column as sd is given only 2 times i.e)last 2 columns*/
+}
+.footer{
+    grid-area: ft;
+}
+
+
+.grid_container{
+    grid-area: mn;
+    min-height:400px;
+     display: grid;
+     grid-template-columns: repeat(4,1fr 2fr);/*it takes first column as 1 fraction space and second column as 2 fraction
+    space that  is repeated for every 4 elements. (200px 1fr 2fr)this is another method of giving column size*/
+  grid-auto-rows: minmax(150px,auto);/*defines the size of rows in min and max as the page it increases so it is auto*/
+    /*  grid-auto-rows: 150px;  another method */
+   gap: 1rem;
+    
+}
+.grid{
+    background-color: black;
+    color: aliceblue;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+.grid:first-child{
+    background-color: blue;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1 / 3;/* row start value / row end value short form of start and end applied above*/
+     
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   /*place-content: center;align items and justify content shortform place content*/
+  
+}
+.grid:nth-child(2){
+    background-color: blueviolet;
+    grid-column: 1 / 5;
+   grid-row: 3 / 4;
+
+    display: grid;
+    place-content: end;
+
+}

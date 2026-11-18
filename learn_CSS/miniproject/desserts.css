@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    font-style: italic;
+    margin: 0;
+    background-color: black;
+   
+ 
+}
+li{
+       list-style-type: none;
+    display: inline-block;
+    margin-inline: 0.5rem;
+}
+li a{
+     color: white;
+     text-decoration: none;
+}
+li a:hover{
+    
+    text-decoration: overline;
+}
+.sweet{
+    float: left;
+    color: white;
+    background-color: black;
+    margin: 1rem;
+    padding: 1rem;
+}
+.sec1{
+    border: 5px solid blue;
+    background-color: aqua;
+    margin-top: 1rem;
+    display: flow-root;
+}
+.ice{
+    float: right;
+    color: white;
+    background-color: black;
+    margin: 1rem;
+    padding: 1rem;
+}
+.sec2{
+     border: 5px solid blue;
+     margin-top: 1rem;
+    display: flow-root;/*to remove the pragraph continues to appear near the float*/
+}

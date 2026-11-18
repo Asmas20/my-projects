@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font: 1.5rem;
+    min-height: 100vh;
+    background-color: bisque;
+    background-image: radial-gradient(white,red);
+    display: flex;
+    flex-direction: column;
+}
+header,main,nav,footer{
+display: grid;
+place-content: center ;
+grid-template-columns: 100%;/*the content to take 100% of the page so that the bg
+ color applied in nav will be applied completely*/
+text-align: center;
+ 
+}
+header,footer{ 
+    background-color: black;
+    color: aliceblue;
+    place-content: center;
+    position: sticky;
+    
+}
+header
+{
+    top: 0;
+}
+nav{
+    padding: 0.5rem;
+    background-color: aliceblue;
+    color: black;
+    border-bottom: 2px solid black;
+
+}
+footer{
+    bottom: 0;
+}
+main{
+    flex-grow: 1;
+}
+/*CSS MEDIA QUERIES*/
+/*small screen i.e)mobile phone*/
+@media screen and (min-width: 576px /*orientation:landscape min aspect ratio:16/9 */)
+/*media mediatype and(condition: breakpoint{css style} follow bootstrap breakpoints website to see the breakpoints for mobile
+,tablet and laptop*/
+{
+    body{
+      background-color: green;
+      background-image: radial-gradient(white,green);
+    }
+  nav{
+    display: none;/*nav will not display in mobile phone screen*/
+  }
+    
+}
+/*medium screen i.e)tablet*/
+@media screen and(min-width:768px) {
+    body{
+      background-color: blue;
+      background-image: radial-gradient(white,blue);
+    }
+  
+}
+/*large screen i.e)laptop*/
+@media screen and(min-width:992px) {
+    body{
+      background-color: pink;
+      background-image: radial-gradient(white,pink);
+    }
+  
+}
