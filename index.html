@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="author"  content="asmas">
+        <meta name="description" content="subsribe to this">
+        <title> My Webpage</title>
+        <link rel="icon" href="logo.png" type="image/png">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+    <body >
+        <header><!--semantic element to make code understand and beauty format for others-->
+            <h1>hello world</h1> 
+             <p> Hey this is my first web page </p> <hr>    
+             <h2>Lets learn HTML</h2> 
+                 <nav> <!--navigation to navigate within the page on clicking the link-->
+                    <ul>
+                         <li><a href="#ch1">Chapter 1</a></li>
+                         <li><a href="#ch2">Chapter 2</a></li>
+                         <li><a href="#ch3">Chapter 3</a></li>
+                         <li><a href="#ch4">Chapter 4</a></li>
+                     </ul>
+                </nav>
+         </header>
+        <main>
+             <section id="ch1">
+                 <h2> chapter 1 - HTML files and basic tags</h2> 
+                    <p> 
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .Create an index file with <strong>html</strong> extension<br> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .start with HTML TAG<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .create a <span style="color: blue"> <strong> HEAD </strong> </span> tag <br> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .create a <em><strong> BODY </strong></em>  tag 
+                    </p>    
+             </section>
+             <section id="ch2">
+                  <h2> chapter 2</h2> 
+                 <h3>Chapter 2 is about basic tags</h3>
+       
+                    <ol start="3" reversed><!--listed from 3 in reverse order this can be performed only in ol not in ul-->
+                        <li>paragraph tag &lt;/p &gt;</li>
+                         <li value="10">heading tag &lt;h&gt;</li> 
+                         <li>Link tag &lt; link &gt;</li> 
+                     </ol> 
+                     <img src="images/tags.jpg" alt="Basic HTML TAGS" width="311" height="162" loading="lazy"><!--lazy loading must be given because only when scrolling 
+                      a webpage the image must be loaded if loading not given then the page tries to load all the images initially which leads to 
+                      slowness of the website-->
+                     <p>For definition and usage <a href="abouttags.html">click here</a></p>
+                     <!--this is comment line-->  
+              </section>
+            <article id="ch3">
+                <h2>Chapter 3</h2>
+                <section>
+                <h2> List and Tables</h2> 
+                <!--a reference of link so that it will direct to different webpage that is hosted on internet-->
+                <p> you can learn this in <abbr title="Mozilla Developer Network"><a href="https://developer.mozilla.org">MDN</a></abbr><!--while placing the cursor in MDN the abbreviation is shown thats the use of abbr tag-->
+                Here are some important points in the list
+            </p> 
+              
+                 <!--discription list(dl),discription term(dt),description definition(dd)-->
+                 <dl> 
+                     <dt>Types of list </dt>
+                     <dd>Ordered list &lt;ol&gt;</dd>
+                     <dd>unordered list &lt;ul&gt;</dd>
+                     <dd>discription list &lt;dt&gt;</dd>
+                     <dt>ordered list</dt>
+                     <dd>It is listed by numbers</dd>
+                     <dt>unordered list</dt>
+                     <dd>It is listed by bulletin</dd>
+                     <dt>discription list</dt>
+                     <dd>It is listed with its description</dd>
+                </dl>
+             </section>
+                <table>
+                    <caption>Table Elements</caption>
+                    <thead>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <th scope="col">tag</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                             <th scope="row">row</th>
+                             <td> &lt;tr&gt; </td>
+                             <td>Represents a row within an HTML table containing individual cells.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">column</th>
+                            <td> &lt;col&gt; </td>
+                            <td>Defines attributes for table columns that can be applied to multiple columns simultaneously.</td>
+                       </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th scope="row">common tags</th>
+                        <td colspan="2"> Refer this in <a href="https://www.w3schools.com/Tags/tag_table.asp">Table tags</a> </td>
+                       </tr>
+                    </tfoot>
+                </table> 
+            </article>
+            <article id="ch4">
+                <h2>Chapter 4</h2>
+                <h2>forms and inputs</h2>
+                <p>Here is an example of basic form </p>
+                <!--below are a method where the inputs are entered-->
+                <form action="https://httpbin.org/get" method="get">
+                <fieldset><!--a semantic for forms also this element is used to construct a form structure-->
+                 <fieldset>
+                    <legend>Personal Details</legend><!--this element is used to gove title for a form-->
+                    <p>
+                         <label for="FirstName">FirstName</label>
+                         <input type="text" name="FirstName" id="FirstName" placeholder="asma" autocomplete="on" required>
+                    </p>
+                     <p>
+                         <label for="LastName">LastName</label>
+                         <input type="text" name="LastName" id="LastName" placeholder="gowhar" autocomplete="on" required>
+                    </p>
+                    <p>
+                        <label for="pwd">Password</label>
+                        <input type="password" name="pwd" id="pwd" placeholder="Asmagowhar1!" required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" placeholder="9780987654" required pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                    </p>
+                    <p>
+                        <label for="dec">Decade</label>
+                        <input type="number" name="dec" id="dec" min="1990" max="2025" step="10" value="2000"><!--when increasing
+                        and decresing the decade input in output window it should decrease/increase the years by 10 thats why
+                        the step attribute used. by using value attribute the deacde is set to 2000 by default-->
+                    </p>
+                     <p><!--below are a method where inputs are selected from options-->
+                        <label for="content">Content</label>
+                        <select name="content" id="content" multiple size="7"><!--multiple attribute used for choosing multiple options
+                            and size is the number of options displayed while choosing here 7 options are displayed-->
+                            <optgroup label="full stack">
+                                 <option value="front end">Front end</option>
+                                 <option value="Back end">Back end</option>
+                                 <option value="Database">Database</option>
+                            </optgroup>
+                            <optgroup label="front end">
+                                 <option value="React" selected>ReactJS</option><!--selected attribute is used bcz by default 
+                                 this reactJS option is selected-->
+                                 <option value="Node">NodeJS</option>
+                            </optgroup>
+                            <optgroup label="backend">
+                                <option value="Java">Java</option>
+                                <option value="PHP">PHP</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p><!--below are method where inputs are entered from the given options-->
+                        <label for="learn">Learn from</label>
+                        <input type="text" name="learn" id="learn" list="website-list">
+                        <datalist id="website-list">
+                            <option value="w3c">
+                            <option value="MDN" selected>
+                            <option value="Geeks For Geeks"> 
+                        </datalist>
+                    </p>
+                 </fieldset>
+                <br><br>
+                  <fieldset>
+                    <legend>Reliable browsers</legend>
+                    <p>
+                        <input type="radio" name="browsers" id="edge" value="edge"><!--radio button type used to choose any 1 option
+                        if you want to choose more than 1 option then use checkbox-->
+                        <label for="edge">edge</label>
+                    </p>
+                    <p>                        
+                        <input type="radio" name="browsers" id="chrome" value="chrome">
+                        <label for="chrome">chrome</label>
+                    </p>
+                    <p>                        
+                        <input type="radio" name="browsers" id="firefox" value="firefox">
+                        <label for="firefox">firefox</label>
+                    </p>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Send me a note</legend>                   
+                     <label for="message">your message</label>
+                    <p>
+                        <textarea name="message" id="message" placeholder="your text here" rows="10" cols="100"></textarea>
+                    </p>
+                  </fieldset>
+                  <br><br>
+                  <button type="submit">submit</button>
+                  <button type="reset">reset</button>
+                  <button type="submit" formaction="https://httpbin.org/post" formmethod="post">post</button><!--insted of using 
+                  get method (see in form tag declaration)post can be used to avoid clumsy storage of data in get method-->
+                </fieldset>
+                </form>
+            </article>
+             <figure><!--the contents of this tag is displayed after some space-->
+                 <figcaption>Here are the list of HTML tags</figcaption>
+                  <img src="images/list_of_tags.png" alt="list of tags" width="1080" height="1080" loading="lazy">
+             </figure>
+                 <hr> 
+             <aside>
+                <details>
+                    <summary><mark>number of hours</mark>to learn</summary>
+                    <p><time datetime="PT8H">8 hours</time></p>
+
+                </details>
+             </aside>
+         </main>
+         <footer>
+              <p>
+                copyrights &copy; asma<br>
+                <a href="#">Back to top</a><!--only # is enough to reach the top of the page-->
+             </p>
+        </footer>
+    </body>
+       
+
+</html>

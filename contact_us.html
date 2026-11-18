@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="asmas">
+        <title>Contact Page</title>
+        <link rel="icon" href="html logo.png" type="image">
+    </head>
+    <body>
+        <header>
+            <h1>Contact Us</h1>
+            <nav>
+                <ul>
+                    <li><a href="project1.html">Home</a></li>
+                    <li><a href="project1.html">About LTS</a></li>
+                    <li><a href="project1.html">Our Menu</a></li>
+                    <li><a href="store_hours.html">Store Hours</a></li>
+                </ul>
+            </nav>
+            <figure>
+                <img src="images/taco_shop_tacos.jpg" alt="Little Taco Shop Tacos" width="279" height="181" loading="lazy">
+                <figcaption>Little Taco Shop Tacos</figcaption>
+            </figure>                     
+        </header>
+        <hr>
+        <main>
+            <h2>Our Contact Form</h2>
+            <form >
+                <fieldset>
+                    <legend>Send Us A Message</legend>
+                   <p>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name" placeholder="your name">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="your email">
+                    </p>
+                    <label for="given_message">Your Message</label>
+                    <p>
+                        <textarea name="given_message" id="given_message" placeholder="Type your text here" rows="10" cols="100"></textarea>
+                    </p>
+                </fieldset>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post">send</button>
+                <button type="reset">Reset</button>
+            </form>         
+        </main>
+        <footer>
+            <h2>Our Location</h2>
+            <address>555 Taco Temptation Lane,Suite T <br> Kansus City, MO 55555-5555 <br><br> <a href="tel:555-555-5555">Phone: 555-555-5555</a></address>
+            <hr>
+            <p>Copyright &copy; The Little Taco Shop</p>
+        </footer>
+    </body>
+</html>
